@@ -16,6 +16,11 @@ import setupInjects from './util/setupInjects';
 import localeLoader from './util/localeLoader';
 import App from './App';
 import filter from './filter/filter';
+import BootstrapVue from 'bootstrap-vue';
+
+Vue.use(BootstrapVue);
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-vue/dist/bootstrap-vue.css';
 
 // register filters globally
 Object.keys(filter).forEach(key => Vue.filter(key, filter[key]));
@@ -48,6 +53,11 @@ if (localeConfig.localeEnabled) {
   Vue.initI18nManager();
 }
 
+//owlCarousel
+import '../staticRoot/asset/lib/OwlCarousel/dist/owl.carousel';
+// import 'owl.carousel';
+import '../staticRoot/asset/lib/OwlCarousel/dist/assets/owl.carousel.css';
+import '../staticRoot/asset/lib/OwlCarousel/dist/assets/owl.theme.default.min.css';
 // sync router data to store
 sync(store, router);
 

@@ -1,17 +1,17 @@
 import { DeviceStateEvent } from 'seng-device-state-tracker';
 import { mapMutations, mapState } from 'vuex';
 import { SET_DEVICE_STATE } from '../store/module/app/app';
-import HeaderComponent from './../component/HeaderComponent'
-import FooterComponent from './../component/FooterComponent'
+// import HeaderComponent from './../component/HeaderComponent'
+// import FooterComponent from './../component/FooterComponent'
 
-const detailComponent = {
-  HeaderComponent,
-  FooterComponent
-};
+// const Component = {
+//   HeaderComponent,
+//   FooterComponent
+// };
 // @vue/component
 export default {
   name: 'App',
-  components: detailComponent,
+  // components: Component,
   computed: {
     ...mapState({
       deviceState: state => state.app.deviceState,
